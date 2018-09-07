@@ -1,0 +1,58 @@
+<?php
+$dataHelper          = $this->helper('Codiac\Advertisement\Helper\Data');
+$Image              = $block->getImage();
+$blockId             = rand().time();
+$name               = $this->getConfig('name');
+$pattern            = $this->getConfig('block_2');
+?>
+<!--<link rel="stylesheet" type="text/css" href='Codiac\Advertisement\view\frontend\web\css\source\_module.less'>-->
+<?php if($pattern=='Horizontal'){ ?>
+<div class="block widget ves-widget Advertisment-widget">
+ 
+    <!-- <?//php if($name){ ?>
+	<div class="block-title">
+        <strong><?//php echo $name ?></strong>
+        
+	</div>
+	<?//php } ?> -->
+	
+    
+    <!-- <div class="Horiz">
+        <?//php foreach ($Image as $k => $v) { ?>
+            <div class="Horizontal"><?//php echo $v; ?></div>
+        <?//php } ?>
+    </div> -->
+    <a href="#" class='Horizontal'>
+       <?php echo $Image[0];?>
+    </a>
+   
+    
+</div>
+<?php } ?>
+
+<?php if($pattern=='Square'){ ?>
+<div class="block widget ves-widget Advertisment-widget ads-square">
+ 
+    <!-- <?//php if($name){ ?>
+	<div class="block-title">
+        <strong><?//php echo $name ?></strong>
+        
+	</div>
+	<?//php } ?> -->
+	
+   
+    
+    
+   
+    <!-- <div class="sq">
+        <?//php foreach ($Image as $k => $v) { ?>
+            <div class="Square"><?//php echo $v; ?></div>
+        <?//php } ?>
+    </div> -->
+    <a href="#" class='Square'>
+       <?php echo $Image[0];?>
+    </a>
+</div>
+<?php } ?>
+
+
